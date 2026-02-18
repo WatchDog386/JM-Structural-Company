@@ -26,8 +26,8 @@ const ProjectCard = ({ image, title, category, index }: ProjectCardProps) => {
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-end p-5">
         <div>
-          <span className="text-accent text-[10px] font-semibold uppercase tracking-widest">{category}</span>
-          <h3 className="text-primary-foreground font-heading font-semibold text-sm mt-0.5">{title}</h3>
+          <span className="text-accent text-[8px] md:text-[9px] font-semibold uppercase tracking-widest">{category}</span>
+          <h3 className="text-primary-foreground font-heading font-semibold text-xs md:text-sm mt-0.5">{title}</h3>
         </div>
       </div>
     </motion.div>

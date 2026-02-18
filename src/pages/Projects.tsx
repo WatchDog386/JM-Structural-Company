@@ -89,17 +89,17 @@ const Projects = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="py-20 bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00A3CC]/15 border border-[#00A3CC]/20 mb-4">
               <CheckCircle2 size={11} className="text-[#00A3CC]" />
-              <span className="text-[10px] text-[#00A3CC] font-medium tracking-wide uppercase">Our Portfolio</span>
+              <span className="text-[9px] md:text-[10px] text-[#00A3CC] font-medium tracking-wide uppercase">Our Portfolio</span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-heading font-bold text-[#0E4861] mb-3">
+            <h1 className="text-lg md:text-xl lg:text-2xl font-heading font-bold text-[#0E4861] mb-2">
               Our Projects
             </h1>
-            <p className="text-gray-500 text-sm max-w-lg mx-auto">
+            <p className="text-gray-500 text-[10px] md:text-xs max-w-lg mx-auto leading-relaxed">
               Engineering excellence across commercial, residential, and infrastructure sectors.
             </p>
           </motion.div>
@@ -107,15 +107,15 @@ const Projects = () => {
       </section>
 
       {/* Filter & Gallery */}
-      <section className="py-24 bg-white">
+      <section className="py-8 md:py-12 bg-white">
         <div className="container mx-auto px-4">
           {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-8 md:mb-10">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-6 py-2 rounded text-sm font-bold transition-all ${
+                className={`px-4 py-1.5 rounded text-[10px] md:text-xs font-bold transition-all ${
                   activeCategory === cat
                     ? "bg-[#0E4861] text-white shadow-lg"
                     : "bg-gray-100 text-[#0E4861] hover:bg-[#0E4861]/10"

@@ -60,7 +60,7 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative w-full h-[400px] flex items-center justify-center bg-[#0E4861] overflow-hidden">
+      <section className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center bg-[#0E4861] overflow-hidden">
         <div className="absolute inset-0 bg-black/20 z-10"></div>
         <div className="absolute inset-0 z-0">
           <img 
@@ -76,10 +76,10 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-heading tracking-tight">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-5 font-heading tracking-tight">
               Our Services
             </h1>
-            <p className="text-white/90 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed">
+            <p className="text-white/90 text-sm md:text-lg font-light max-w-2xl mx-auto leading-relaxed">
               Comprehensive engineering solutions built on <br className="hidden md:block" /> expertise, precision, and integrity.
             </p>
           </motion.div>
@@ -87,9 +87,9 @@ const Services = () => {
       </section>
 
       {/* Services List */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-12 md:py-16 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-10 md:gap-14">
             {services.map((service, i) => (
               <motion.div
                 key={service.title}
@@ -97,20 +97,20 @@ const Services = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className={`flex flex-col ${i % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} gap-8 lg:gap-12 items-center`}
+                className={`flex flex-col ${i % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:gap-10 items-center`}
               >
                 {/* Image Side - Simple, clean, no card styling */}
                 <div className="w-full lg:w-5/12">
                    <div className="relative overflow-hidden group">
                      {/* Decorative element */}
-                     <div className={`absolute -top-4 ${i % 2 === 1 ? "-right-4" : "-left-4"} w-20 h-20 bg-[#0E4861]/5 z-0 rounded-full blur-2xl`}></div>
+                     <div className={`absolute -top-4 ${i % 2 === 1 ? "-right-4" : "-left-4"} w-16 h-16 bg-[#0E4861]/5 z-0 rounded-full blur-2xl`}></div>
                      
                      <motion.img 
                         whileHover={{ scale: 1.05, rotate: 1 }}
                         transition={{ duration: 0.3 }}
                         src={service.image} 
                         alt={service.title}
-                        className="relative z-10 w-full h-[250px] md:h-[300px] object-cover sm:rounded-lg shadow-lg" 
+                        className="relative z-10 w-full h-[200px] md:h-[250px] object-cover sm:rounded-lg shadow-lg" 
                      />
                    </div>
                 </div>
@@ -122,12 +122,12 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-3 mb-4"
+                    className="flex items-center gap-2 mb-2"
                   >
-                    <div className="w-10 h-10 rounded-full bg-[#00A3CC]/10 flex items-center justify-center text-[#00A3CC]">
-                      <service.icon size={20} strokeWidth={1.5} />
+                    <div className="w-8 h-8 rounded-full bg-[#00A3CC]/10 flex items-center justify-center text-[#00A3CC]">
+                      <service.icon size={16} strokeWidth={1.5} />
                     </div>
-                    <span className="text-[#00A3CC] font-bold tracking-wider text-xs uppercase">Service 0{i + 1}</span>
+                    <span className="text-[#00A3CC] font-bold tracking-wider text-[10px] uppercase">Service 0{i + 1}</span>
                   </motion.div>
                   
                   <motion.h2 
@@ -135,7 +135,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-2xl md:text-3xl font-bold text-[#0E4861] mb-4 font-heading"
+                    className="text-lg md:text-2xl font-bold text-[#0E4861] mb-2 font-heading"
                   >
                     {service.title}
                   </motion.h2>
@@ -145,7 +145,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-gray-500 text-base leading-relaxed mb-6 font-light"
+                    className="text-gray-500 text-[10px] md:text-xs leading-relaxed mb-4 font-light text-justify"
                   >
                     {service.description}
                   </motion.p>
@@ -155,15 +155,15 @@ const Services = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-6"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-y-1.5 gap-x-4"
                   >
 
                     {service.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full bg-[#22C55E]/10 flex items-center justify-center shrink-0">
-                          <Check size={10} className="text-[#22C55E]" strokeWidth={3} />
+                        <div className="w-3 h-3 rounded-full bg-[#22C55E]/10 flex items-center justify-center shrink-0">
+                          <Check size={8} className="text-[#22C55E]" strokeWidth={3} />
                         </div>
-                        <span className="text-[#0E4861] font-medium text-xs">{benefit}</span>
+                        <span className="text-[#0E4861] font-medium text-[9px] md:text-[10px]">{benefit}</span>
                       </div>
                     ))}
                   </motion.div>
@@ -173,9 +173,9 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="mt-6"
+                    className="mt-4"
                   >
-                     <Link to="/contact" className="text-[#0E4861] font-bold text-xs border-b-2 border-[#00A3CC] pb-1 hover:text-[#00A3CC] transition-colors">
+                     <Link to="/contact" className="text-[#0E4861] font-bold text-[10px] border-b-2 border-[#00A3CC] pb-0.5 hover:text-[#00A3CC] transition-colors">
                        Request this service
                      </Link>
                   </motion.div>
