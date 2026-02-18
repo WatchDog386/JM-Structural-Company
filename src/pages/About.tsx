@@ -44,6 +44,11 @@ const About = () => {
             <p className="text-blue-50/90 text-lg md:text-2xl font-light max-w-3xl mx-auto leading-relaxed border-t border-white/10 pt-8 mt-4">
               Engineering strength, building trust, and serving communities with <br className="hidden md:block"/> uncommon purpose and unwavering integrity.
             </p>
+            
+            <div className="mt-8 flex flex-col items-center gap-3">
+              <p className="text-white font-semibold text-sm md:text-base">JM Leads The Way!</p>
+              <p className="text-[#FFD700] font-bold text-sm md:text-lg">We depend on God</p>
+            </div>
           </motion.div>
         </div>
       </section>

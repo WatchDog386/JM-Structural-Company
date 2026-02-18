@@ -33,7 +33,7 @@ const Navbar = () => {
                 <img 
                   src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/499412170_2508487489508379_5327772305037987538_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_eui2=AeFXLndQEp47DcRofi1ba4dOOHaPjsD9yrk4do-OwP3KuVSmCsbbPakFXkpJRAmfYYIBuYP6JZmWepwOy_Sl25mr&_nc_ohc=lF6RLjx8K1wQ7kNvwFyRVhC&_nc_oc=AdlnasVbJT6kYyLBZ-o7dWwSxqjcYCu6ZXZ9WEzXkd8hgpdFk_3-azYJO-Wsd8c4bpk&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=EdmRitnQzB1cjkqr_AOSqg&oh=00_AfvbFO_ezxHqN-AJAQrRP2CTLsXDdkDXnwZxbl1ME22i6Q&oe=699A9D75" 
                   alt="JM Structural Logo" 
-                  className="h-12 md:h-16 w-auto object-contain rounded-full border-2 border-white shadow-lg mb-1"
+                  className="h-12 md:h-16 w-auto object-contain rounded-full border-2 border-white shadow-lg mb-1 mt-2 md:mt-3"
                 />
                 <span className="text-white text-[8px] md:text-[10px] uppercase tracking-widest font-bold shadow-sm">We Depend On God</span>
               </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
                
                <Link 
                  to="/contact" 
-                 className="text-[#0E4861] font-bold text-xs lg:text-sm hover:text-[#008fb3] transition-colors font-heading border border-[#0E4861] px-4 py-2 rounded hover:bg-[#0E4861] hover:text-white"
+                 className="text-[#0E4861] font-bold text-xs lg:text-sm hover:text-[#008fb3] transition-colors font-heading border border-[#0E4861] px-4 py-2 rounded-lg hover:bg-[#0E4861] hover:text-white"
                >
                  Get a Quote
                </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-20 left-0 w-full bg-white z-40 shadow-xl border-t border-gray-100 overflow-hidden"
+            className="fixed top-20 left-0 w-full bg-white z-50 shadow-xl border-t border-gray-100 overflow-hidden"
           >
             <div className="flex flex-col p-6 gap-4 items-center">
                <Link to="/" onClick={() => setIsOpen(false)} className={`font-bold text-lg ${isActive("/") ? "text-[#008fb3]" : "text-[#0E4861]"}`}>Home</Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
                <Link to="/services" onClick={() => setIsOpen(false)} className={`font-bold text-lg ${isActive("/services") ? "text-[#008fb3]" : "text-[#0E4861]"}`}>Services</Link>
                <Link to="/projects" onClick={() => setIsOpen(false)} className={`font-bold text-lg ${isActive("/projects") ? "text-[#008fb3]" : "text-[#0E4861]"}`}>Projects</Link>
                <Link to="/contact" onClick={() => setIsOpen(false)} className={`font-bold text-lg ${isActive("/contact") ? "text-[#008fb3]" : "text-[#0E4861]"}`}>Contact</Link>
-               <Link to="/contact" onClick={() => setIsOpen(false)} className="mt-4 px-6 py-3 bg-[#008fb3] text-white font-bold rounded shadow-lg uppercase tracking-wide text-sm">
+               <Link to="/contact" onClick={() => setIsOpen(false)} className="mt-4 px-6 py-3 bg-[#008fb3] text-white font-bold rounded-2xl shadow-lg uppercase tracking-wide text-sm">
                  Get a Quote
                </Link>
             </div>

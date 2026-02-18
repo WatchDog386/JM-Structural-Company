@@ -110,7 +110,7 @@ const Services = () => {
                         transition={{ duration: 0.3 }}
                         src={service.image} 
                         alt={service.title}
-                        className="relative z-10 w-full h-[250px] md:h-[300px] object-cover sm:rounded-sm shadow-lg" 
+                        className="relative z-10 w-full h-[250px] md:h-[300px] object-cover sm:rounded-lg shadow-lg" 
                      />
                    </div>
                 </div>
@@ -210,13 +210,13 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center h-14 px-8 bg-white text-[#0E4861] font-bold text-base rounded shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center justify-center h-14 px-8 bg-white text-[#0E4861] font-bold text-base rounded-2xl shadow-lg hover:bg-gray-100 hover:scale-105 transition-all duration-300"
                 >
                   Start Consultation
                 </Link>
                 <Link
                   to="/projects"
-                  className="inline-flex items-center justify-center h-14 px-8 border border-white/30 text-white font-bold text-base rounded hover:bg-white/10 transition-all duration-300"
+                  className="inline-flex items-center justify-center h-14 px-8 border border-white/30 text-white font-bold text-base rounded-2xl hover:bg-white/10 transition-all duration-300"
                 >
                   View Our Projects
                 </Link>
