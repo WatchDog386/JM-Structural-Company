@@ -150,7 +150,7 @@ const Index = () => {
            <div className="w-full px-4 md:px-8 flex justify-between items-center h-full">
               {/* Logo - Sits in the Blue Zone */}
               <div className="z-50 flex flex-col items-start">
-                <h1 className="text-white text-4xl md:text-5xl font-black tracking-tighter leading-none mb-1 font-heading">
+                <h1 className="text-[#0E4861] md:text-white text-4xl md:text-5xl font-black tracking-tighter leading-none mb-1 font-heading">
                   JM
                 </h1>
               </div>
@@ -209,23 +209,23 @@ const Index = () => {
               transition={{ duration: 0.6 }}
               className="max-w-[800px] lg:max-w-[900px] mx-auto md:mx-0"
             >
-              <h1 className="text-xl md:text-4xl lg:text-6xl font-black leading-[1.3] lg:leading-[1.2] mb-6 font-heading tracking-tight drop-shadow-sm">
-                <span className="text-[#1a1a1a]">We build your </span>
+              <h1 className="text-2xl md:text-4xl lg:text-6xl font-black leading-[1.3] lg:leading-[1.2] mb-4 md:mb-6 font-heading tracking-tight drop-shadow-sm pt-24 md:pt-0">
+                <span className="text-white drop-shadow-md">We build your </span>
                 <span className="text-[#D65828] drop-shadow-md">dream house</span>
-                <span className="text-[#1a1a1a]"> well and professionally</span>
+                <span className="text-white drop-shadow-md"> well and professionally</span>
               </h1>
 
-              <div className="text-[#D65828] text-3xl md:text-5xl mb-6 block tracking-wide" style={{ fontFamily: '"Dancing Script", cursive' }}>
+              <div className="hidden md:block text-[#D65828] text-3xl md:text-5xl mb-6 tracking-wide" style={{ fontFamily: '"Dancing Script", cursive' }}>
                 JM Leads The Way!
               </div>
-              
-              <div className="flex flex-col md:flex-row gap-4">
+
+              <div className="flex flex-row gap-3 md:gap-4 justify-center md:justify-start pt-4 md:pt-0">
                 <Link 
                   to="/projects"  
-                  className="inline-flex items-center justify-center px-8 py-3 bg-[#4CAF50] hover:bg-[#43a047] text-white rounded-full font-black text-sm uppercase tracking-wide shadow-lg transition-transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-3 bg-[#4CAF50] hover:bg-[#43a047] text-white rounded-full font-black text-xs md:text-sm uppercase tracking-wide shadow-lg transition-transform hover:scale-105"
                 >
-                  <span className="bg-white/20 rounded-full p-1 mr-3">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="ml-0.5">
+                  <span className="bg-white/20 rounded-full p-1 mr-2 md:mr-3">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="ml-0 md:ml-0.5 w-3 h-3 md:w-[14px] md:h-[14px]">
                       <path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
                     </svg>
                   </span>
@@ -234,10 +234,10 @@ const Index = () => {
 
                 <Link 
                   to="/contact"  
-                  className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#0E4861] hover:bg-gray-50 rounded-full font-black text-sm uppercase tracking-wide shadow-lg transition-transform hover:scale-105 border border-transparent"
+                  className="inline-flex items-center justify-center px-5 py-2 md:px-8 md:py-3 bg-white text-[#0E4861] hover:bg-gray-50 rounded-full font-black text-xs md:text-sm uppercase tracking-wide shadow-lg transition-transform hover:scale-105 border border-transparent"
                 >
                   Contact Us
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="ml-1 md:ml-2 w-3.5 h-3.5 md:w-4 md:h-4">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </Link>
