@@ -12,22 +12,22 @@ const ProjectCard = ({ image, title, category, index }: ProjectCardProps) => {
     <motion.div
       initial={{ opacity: 0, scale: 0.97 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, margin: "-30px" }}
-      transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="group relative overflow-hidden rounded-xl cursor-pointer shadow-sm"
+      viewport={{ once: true, margin: "-20px" }}
+      transition={{ duration: 0.35, delay: index * 0.06 }}
+      className="group relative overflow-hidden rounded-lg cursor-pointer shadow-sm"
     >
       <div className="aspect-[4/3] overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-end p-5">
+      <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-3">
         <div>
-          <span className="text-accent text-[8px] md:text-[9px] font-semibold uppercase tracking-widest">{category}</span>
-          <h3 className="text-primary-foreground font-heading font-semibold text-xs md:text-sm mt-0.5">{title}</h3>
+          <span className="text-accent text-[7px] md:text-[8px] font-semibold uppercase tracking-widest">{category}</span>
+          <h3 className="text-primary-foreground font-heading font-semibold text-[10px] md:text-[11px] mt-0.5">{title}</h3>
         </div>
       </div>
     </motion.div>
