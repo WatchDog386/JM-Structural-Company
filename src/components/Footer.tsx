@@ -3,87 +3,74 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0E4861] text-white border-t border-white/10">
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 lg:gap-8">
+    <footer className="bg-secondary text-primary-foreground border-t border-primary-foreground/10">
+      <div className="container mx-auto px-3 py-6 md:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           
-          {/* Brand Column */}
-          <div className="space-y-3 md:space-y-6">
+          <div className="space-y-2">
             <div className="flex flex-col items-start">
                <img 
                   src="https://scontent-mba2-1.xx.fbcdn.net/v/t39.30808-6/499412170_2508487489508379_5327772305037987538_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_eui2=AeFXLndQEp47DcRofi1ba4dOOHaPjsD9yrk4do-OwP3KuVSmCsbbPakFXkpJRAmfYYIBuYP6JZmWepwOy_Sl25mr&_nc_ohc=lF6RLjx8K1wQ7kNvwFyRVhC&_nc_oc=AdlnasVbJT6kYyLBZ-o7dWwSxqjcYCu6ZXZ9WEzXkd8hgpdFk_3-azYJO-Wsd8c4bpk&_nc_zt=23&_nc_ht=scontent-mba2-1.xx&_nc_gid=EdmRitnQzB1cjkqr_AOSqg&oh=00_AfvbFO_ezxHqN-AJAQrRP2CTLsXDdkDXnwZxbl1ME22i6Q&oe=699A9D75" 
                   alt="JM Structural Logo" 
-                  className="h-12 md:h-16 w-auto object-contain rounded-full border-2 border-white/20 shadow-lg mb-2 md:mb-4"
+                  className="h-10 md:h-12 w-auto object-contain rounded-full border border-primary-foreground/20 shadow-md mb-2"
                 />
-               <h3 className="text-lg md:text-2xl font-bold font-heading">JM Structural Solutions</h3>
-               <p className="text-[#00A3CC] text-xs font-bold uppercase tracking-widest mt-1">We Depend On God</p>
+               <h3 className="text-sm md:text-base font-bold font-heading">JM Structural Solutions</h3>
+               <p className="text-primary text-[9px] font-bold uppercase tracking-widest mt-0.5">We Depend On God</p>
             </div>
-            <p className="text-blue-100/70 text-xs md:text-sm leading-relaxed max-w-xs">
-              Dedicated to excellence in architectural design, structural engineering, and construction. Building your future with integrity and precision.
+            <p className="text-primary-foreground/60 text-[10px] md:text-xs leading-relaxed max-w-xs">
+              Dedicated to excellence in architectural design, structural engineering, and construction.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="hidden md:block lg:pl-8">
-            <h4 className="text-lg font-bold mb-6 font-heading text-white">Quick Links</h4>
-            <ul className="space-y-4">
-              {["Home", "About Us", "Services", "Our Projects", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link to="/" className="text-blue-100/70 hover:text-[#00A3CC] hover:pl-2 transition-all duration-300 text-sm flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#00A3CC]"></span>
-                    {item}
+          <div className="hidden md:block lg:pl-6">
+            <h4 className="text-xs font-bold mb-3 font-heading">Quick Links</h4>
+            <ul className="space-y-2">
+              {[
+                { label: "Home", path: "/" },
+                { label: "About Us", path: "/about" },
+                { label: "Services", path: "/services" },
+                { label: "Projects", path: "/projects" },
+                { label: "Contact", path: "/contact" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link to={item.path} className="text-primary-foreground/60 hover:text-primary transition-colors text-[11px] flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-primary"></span>
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-
-          {/* Contact Info */}
           <div className="hidden md:block">
-            <h4 className="text-lg font-bold mb-6 font-heading text-white">Contact Us</h4>
-            <ul className="space-y-6">
-              <li className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded bg-[#00A3CC]/10 flex items-center justify-center shrink-0 mt-1">
-                   <MapPin className="text-[#00A3CC]" size={20} />
-                </div>
-                <div>
-                   <span className="block text-white font-medium text-sm mb-1">Office Address</span>
-                   <span className="text-blue-100/70 text-sm block leading-relaxed">123 Construction Ave, Industrial District, City, Country</span>
-                </div>
-              </li>
-              <li className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded bg-[#00A3CC]/10 flex items-center justify-center shrink-0">
-                   <Phone className="text-[#00A3CC]" size={20} />
-                </div>
-                <div>
-                   <span className="block text-white font-medium text-sm mb-1">Phone Number</span>
-                   <span className="text-blue-100/70 text-sm block">+1 (234) 567-890</span>
-                </div>
-              </li>
-              <li className="flex items-center gap-4">
-                 <div className="w-10 h-10 rounded bg-[#00A3CC]/10 flex items-center justify-center shrink-0">
-                   <Mail className="text-[#00A3CC]" size={20} />
-                </div>
-                <div>
-                   <span className="block text-white font-medium text-sm mb-1">Email Address</span>
-                   <span className="text-blue-100/70 text-sm block">info@jmstructural.com</span>
-                </div>
-              </li>
+            <h4 className="text-xs font-bold mb-3 font-heading">Contact Us</h4>
+            <ul className="space-y-3">
+              {[
+                { icon: MapPin, label: "Office", value: "123 Construction Ave, City" },
+                { icon: Phone, label: "Phone", value: "+1 (234) 567-890" },
+                { icon: Mail, label: "Email", value: "info@jmstructural.com" },
+              ].map((item) => (
+                <li key={item.label} className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded bg-primary/10 flex items-center justify-center shrink-0">
+                     <item.icon className="text-primary" size={13} />
+                  </div>
+                  <div>
+                     <span className="text-primary-foreground/60 text-[10px] block leading-snug">{item.value}</span>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
-
         </div>
       </div>
 
-      {/* Copyright Bar */}
-      <div className="border-t border-white/5 bg-[#0b3d54]">
-        <div className="container mx-auto px-4 py-3 md:py-6">
-           <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4">
-              <p className="text-[10px] md:text-xs text-blue-100/50">
-                © {new Date().getFullYear()} JM Structural Solutions. All rights reserved. | <Link to="#" className="hover:text-white">Privacy Policy</Link>
+      <div className="border-t border-primary-foreground/5 bg-secondary/80">
+        <div className="container mx-auto px-3 py-2.5">
+           <div className="flex flex-col md:flex-row justify-between items-center gap-1">
+              <p className="text-[9px] md:text-[10px] text-primary-foreground/40">
+                © {new Date().getFullYear()} JM Structural Solutions. All rights reserved.
               </p>
-              <p className="text-[10px] md:text-xs text-blue-100/50 flex items-center gap-1">
+              <p className="text-[9px] md:text-[10px] text-primary-foreground/40">
                  Designed with excellence
               </p>
            </div>
